@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: aws
+
+  cloud:
+    aws:
+      credentials:
+        access-key: ???
+        secret-key: ???
+      region:
+        static: ru-central1
+      endpoint: https://storage.yandexcloud.net
+
+application:
+  bucket:
+    name: ???
