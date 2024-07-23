@@ -12,7 +12,7 @@ public class TextStorageRestController {
     private final TextStorageService textStorageService;
 
     @PutMapping
-    public ResponseEntity<String> put(@RequestBody String text) {
+    public ResponseEntity<String> put(@RequestParam String text) {
         String key = Integer.toString(text.hashCode());
         textStorageService.upload(key, text);
         return new ResponseEntity<>(key, HttpStatus.OK);
